@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+typedef struct info {
+	char a[32];
+	char b[32];
+	int c;
+	struct info *next;
+}info;
+typedef struct queue{
+	struct info *head, *tail;
+}queue;
+void init(queue *q){
+	q->head = NULL;
+	q->tail = NULL;
+}
+
+void add(queue *q, char *s[32], char *w[32], int i){
+	struct info *tmp;
+	tmp = (info*)malloc(sizeof(info));
+	if(tmp == NULL){
+		perror("\n\tfailed: ");
+		exit(1);
+	}
+	strcpy(tmp->a, q);
+	strcpy(tmp->b, w);
+	tmp->c = i;
+	if(q->tail){
+		q->tail->next = tmp;
+	}
+	else 
+		q->head = tmp;
+	q->tail = tmp;
+}
+int main (){
+	queue q;
+	int i;
+	char s[32], w[32];
+	printf("enter the following details \n");
+	printf("name : ");
+	scanf("%s", s);
+	scanf("%s", w);
+	scanf("%d", &i);
+	add(&q, s, w, i);
+	return 0;
+}
+	

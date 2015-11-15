@@ -1,0 +1,5 @@
+physics	sreesanth	raman_pub	463	p1
+chemistry	nithesh	shushma_swaraj	467	c1
+maths	robot	bolt_pub	235	m1
+data_structure	sahani	nirali_pub	4743	d1
+strength_of_material	wasi_shaikh	rushi_pub	948	s1
